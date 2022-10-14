@@ -1,25 +1,7 @@
-# Tools
+To get install and to run the project follow the steps : 
 
-## Node Latest
-https://nodejs.org/en/
+1. Run command : npm intsall --force
 
-## Git
-https://git-scm.com/
+2. Run command : ng serve
 
-## Jetbrains Toolbox + Webstorm EAP
-https://www.jetbrains.com/toolbox/download/
-
-WARNING: Do not enable "vim" mode.
-
-# Course material
-
-## Wishtack courses
-https://guide-angular.wishtack.io
-
-## Floobits
-https://floobits.com/younes
-
-## Repo
-https://www.github.com/wishtack-training/wt-training-angular
-
-## Checkout today's branch: YYYY-MM-DD.
+About Developer : Omkar Hande (www.omkarhande.com)
