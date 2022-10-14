@@ -1,0 +1,18 @@
+textarea
+{
+  height: 33%;
+  width:95%;
+}
+body {
+  background-color: lightblue;
+}
+.main-container {
+  height: 80%;
+  text-align: -webkit-center;
+}
+.main-class {
+  height: 100%;
+  width: 80%;
+  background-image: url("/assets/speech.jpg");
+  background-size: cover;
+}
