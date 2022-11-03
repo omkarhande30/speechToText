@@ -5,7 +5,6 @@ import { Scavenger } from '@wishtack/rx-scavenger';
 import { debounceTime, switchMap } from 'rxjs/operators';
 import { NgZone } from '@angular/core';
 import { Observable } from 'rxjs';
-import axios, { Axios } from 'axios';
 
 
 @Component({
@@ -60,19 +59,6 @@ export class AppComponent {
           this.speech = transcript
         }
       });
-    const res = Axios.call("https://libretranslate.com/translate", {
-      method: "POST",
-      body: JSON.stringify({
-        q: this.speech,
-        source: "en",
-        target: "hi",
-        format: "text",
-        api_key: ""
-      }),
-      headers: { "Content-Type": "application/json" }
-    });
-
-    console.log('HINDI>>>>>>>>>>>>>>>>>>>>>>', res);
   }
   clearText() {
     this.voice = ''
