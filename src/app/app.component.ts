@@ -17,11 +17,12 @@ export class AppComponent {
   boo = false;
   speech: string = '';
   voice = ''
+  localLang = 'en-US'
   ngOnInit() {
   }
   constructor(private _ngZone: NgZone) {
   }
-  getTranscript({ locale = 'en-US' }: { locale?: string } = {}): Observable<string> {
+  getTranscript({ locale = this.localLang }: { locale?: string } = {}): Observable<string> {
 
     return new Observable(observer => {
       const SpeechRecognition = window['webkitSpeechRecognition'];
@@ -64,7 +65,6 @@ export class AppComponent {
     this.voice = ''
     this.speech = ''
   }
-
 
   // Downloading Speech function
   expFile() {
