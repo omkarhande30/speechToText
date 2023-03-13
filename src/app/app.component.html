@@ -6,16 +6,13 @@
         <div class="main-class">
             <h1 class="bg-primary">Automated Notes Maker</h1>
             <div class="form-group" style="height: 50px;">
-                <label for="selectLang" style="font-size: x-large; color: white;">Please select your language</label>
-                <select class="form-control" [(ngModel)]="localLang" (ngModelChange)="clearText()" name="selectLang" id="selectLang" style="width: 400px;">
-                    <option value="en-US">English</option>
-                    <option value="mr-IN">Marathi</option>
-                    <option value="hi-IN">Hindi</option>
-                    <option value="de-DE">German</option>
-                    <option value="zh-CN">Chinese</option>
+                <label for="selectLang" class="langLabel">Please select your language</label>
+                <select class="form-control" [(ngModel)]="localLang" (ngModelChange)="clearText()" name="selectLang"
+                    id="selectLang" style="width: 400px;">
+                    <option *ngFor="let lang of languageArray" [ngValue]="lang.locale">{{ lang.language }}</option>
                 </select>
             </div>
-            <textarea style="margin-top: 30px">{{voice}}</textarea>
+            <textarea>{{voice}}</textarea>
             <div style="margin-top:10px">
                 <button class="btn btn-primary" style="margin-right: 5px" (click)="recognize()">Click here to record a
                     speech

@@ -5,6 +5,7 @@ import { Scavenger } from '@wishtack/rx-scavenger';
 import { debounceTime, switchMap } from 'rxjs/operators';
 import { NgZone } from '@angular/core';
 import { Observable } from 'rxjs';
+// import { translate } from 'translate-google'
 
 
 @Component({
@@ -18,6 +19,29 @@ export class AppComponent {
   speech: string = '';
   voice = ''
   localLang = 'en-US'
+  translateToEnglish = '';
+  languageArray = [
+    {
+      locale: 'en-US',
+      language: 'English'
+    },
+    {
+      locale: 'mr-IN',
+      language: 'Marathi'
+    },
+    {
+      locale: 'hi-IN',
+      language: 'Hindi'
+    },
+    {
+      locale: 'de-DE',
+      language: 'German'
+    },
+    {
+      locale: 'zh-CN',
+      language: 'Chinese'
+    },
+  ]
   ngOnInit() {
   }
   constructor(private _ngZone: NgZone) {
@@ -55,6 +79,7 @@ export class AppComponent {
       .subscribe(transcript => {
         if (transcript !== '' && this.boo) {
           this.voice = this.voice + ' ' + transcript;
+          console.log('Transcript', transcript)
         }
         else {
           this.speech = transcript

@@ -16,3 +16,10 @@ body {
   background-image: url("/assets/speech.jpg");
   background-size: cover;
 }
+textarea{
+  margin-top: 30px;
+  font-size: large;
+}
+.langLabel{
+  font-size: x-large; color: white;
+}
